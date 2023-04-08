@@ -64,7 +64,6 @@ public class googlestepdefinitions {
         Assert.assertTrue(pageSource.contains(string));
 
     }
-
     @Then("verify the results should contains {string} keyword")
     public void verify_the_results_should_contains_keyword(String string) {
         googlePages.resultSection.shouldBe(visible);//checks if visible on the page
