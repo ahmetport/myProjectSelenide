@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="Cucumber" time="18.956" tests="1" skipped="0" failures="0" errors="0">
-<testcase classname="Assertions2" name="Search for tesla" time="18.796">
+<testsuite name="Cucumber" time="75.908" tests="1" skipped="0" failures="0" errors="0">
+<testcase classname="Assertions2" name="Search for tesla" time="75.798">
 <system-out><![CDATA[
 Given I navigate to "https://www.google.com"................................passed
 When I search for "Tesla"...................................................passed
 Then verify page source contains "Tesla"....................................passed
 Then verify the results should contains "About" keyword.....................passed
+Then the firstb result in the page sections should contain "Tesla"..........passed
 ]]></system-out>
 </testcase>
 </testsuite>

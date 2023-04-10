@@ -47,12 +47,14 @@ public class googlestepdefinitions {
     }
 
     @Given("I hold the browser open")
-    public void i_hold_the_browser_open() {
+    public void i_hold_the_browser_open()
+    {
         Configuration.holdBrowserOpen = true;
     }
 
     @When("I search for {string}")
-    public void iSearchFor(String string) {
+    public void iSearchFor(String string)
+    {
         googlePages.googlesearchbox.setValue(string).pressEnter();
     }
 
@@ -60,20 +62,25 @@ public class googlestepdefinitions {
     public void verifyPageSourceContains(String string) {
 //        WebDriverRunner.url() return thr url of the page
         String pageSource = WebDriverRunner.source(); // page source
-        System.out.println(pageSource);
+       // System.out.println(pageSource);
         Assert.assertTrue(pageSource.contains(string));
 
     }
     @Then("verify the results should contains {string} keyword")
     public void verify_the_results_should_contains_keyword(String string) {
-        googlePages.resultSection.shouldBe(visible);//checks if visible on the page
+  //      Assert.assertTrue(googlePages.resultSection.toString().contains(string));//OR BELOW CAN BE USED
+//        googlePages.resultSection.shouldHave(text(string));//about 712,000
         googlePages.resultSection.shouldNotHave(text("mercedes"));//negative test checking
-        googlePages.resultSection.shouldHave(text(string));//about 712,000
+        googlePages.resultSection.shouldBe(visible);//checks if visible on the page
+        sleep(60000);
 
-
-
+  //      googlePages.resultSection.shouldHave(exactText("Yaklaşık 786.000.000 sonuç bulundu"));//check the exact text match
     }
 
+    @Then("the firstb result in the page sections should contain {string}")
+    public void theFirstbResultInThePageSectionsShouldContain(String string) {
+        googlePages.getAllSections.get(0).shouldHave(text(string));//checks is the first section contains Tesla keyword
 
+    }
 }
 
