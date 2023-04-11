@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="Cucumber" time="75.908" tests="1" skipped="0" failures="0" errors="0">
-<testcase classname="Assertions2" name="Search for tesla" time="75.798">
+<testsuite name="Cucumber" time="13.705" tests="1" skipped="0" failures="0" errors="0">
+<testcase classname="alerts automationTesting" name="TC_01 alerts" time="13.537">
 <system-out><![CDATA[
-Given I navigate to "https://www.google.com"................................passed
-When I search for "Tesla"...................................................passed
-Then verify page source contains "Tesla"....................................passed
-Then verify the results should contains "About" keyword.....................passed
-Then the firstb result in the page sections should contain "Tesla"..........passed
+Given I navigate to "https://testcenter.techproeducation.com/index.php?page=javascript-alerts".passed
+And I click on alert prompt.................................................passed
+And I enter "Hello portakal" and click OK...................................passed
+And I verify the result contains "Hello portakal"...........................passed
+And I hold the browser open.................................................passed
 ]]></system-out>
 </testcase>
 </testsuite>
