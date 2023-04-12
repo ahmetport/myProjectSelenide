@@ -33,6 +33,12 @@ public class TestPages {
     public SelenideElement jsPrompt=$(By.xpath("//button[@onclick='jsPrompt()']"));
     public SelenideElement result =$(By.id("result"));
 
+    //iframes
+
+    public SelenideElement pageHeader=$(By.xpath("//h3"));
+    public SelenideElement backtechpro=$(By.xpath("//a[@type='button']"));
+
+
 
 
 }

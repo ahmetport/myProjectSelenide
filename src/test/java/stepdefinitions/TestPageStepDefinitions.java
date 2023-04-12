@@ -5,9 +5,13 @@ import com.codeborne.selenide.SelenideElement;
 import com.codeborne.selenide.WebDriverRunner;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
+import io.cucumber.java.en.Then;
+import io.cucumber.java.en.When;
+import org.junit.Assert;
 import pages.TestPages;
 
 import static com.codeborne.selenide.Selenide.sleep;
+import static com.codeborne.selenide.Selenide.switchTo;
 
 
 public class TestPageStepDefinitions {
@@ -104,6 +108,40 @@ public class TestPageStepDefinitions {
     @Given("I verify the result contains {string}")
     public void i_verify_the_result_contains(String string) {
         testPages.result.shouldHave(Condition.text(string));
+
+    }
+
+    // FRAMES
+
+    @Given("I verify the page header contains {string}")
+    public void i_verify_the_page_header_contains(String string) {
+        // iframe in dışındayız
+        testPages.pageHeader.shouldHave(Condition.text(string));
+
+    }
+    @Given("I switch to frame {int}")
+    public void i_switch_to_frame(Integer int1) {
+        //iframe window
+        WebDriverRunner.getWebDriver().switchTo().frame(int1-1);
+
+    }
+    @Given("I click on back to TechProEducation.com")
+    public void i_click_on_back_to_tech_pro_education_com() {
+        //iframe in içindeyiz
+        testPages.backtechpro.click();
+
+    }
+
+    //switch to window
+    @When("I switch to window {int}")
+    public void i_switch_to_window(Integer int1) {
+        switchTo().window(int1-1);
+
+    }
+    @Then("I get to URL of the page and verify it contains {string}")
+    public void i_get_to_url_of_the_page_and_verify_it_contains(String string) {
+        System.out.println(WebDriverRunner.url());
+        Assert.assertTrue(WebDriverRunner.url().contains(string));
 
     }
 }

@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="Cucumber" time="13.705" tests="1" skipped="0" failures="0" errors="0">
-<testcase classname="alerts automationTesting" name="TC_01 alerts" time="13.537">
+<testsuite name="Cucumber" time="27.736" tests="1" skipped="0" failures="0" errors="0">
+<testcase classname="iframes testing" name="TC_01 frames testing" time="27.614">
 <system-out><![CDATA[
-Given I navigate to "https://testcenter.techproeducation.com/index.php?page=javascript-alerts".passed
-And I click on alert prompt.................................................passed
-And I enter "Hello portakal" and click OK...................................passed
-And I verify the result contains "Hello portakal"...........................passed
+Given I navigate to "https://testcenter.techproeducation.com/index.php?page=iframe".passed
+And I verify the page header contains "iframe"..............................passed
+And I switch to frame 1.....................................................passed
+And I click on back to TechProEducation.com.................................passed
+And I wait for 5 seconds....................................................passed
+Then I get to URL of the page and verify it contains "techproeducation".....passed
 And I hold the browser open.................................................passed
 ]]></system-out>
 </testcase>
