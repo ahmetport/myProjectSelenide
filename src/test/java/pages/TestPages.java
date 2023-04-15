@@ -38,6 +38,14 @@ public class TestPages {
     public SelenideElement pageHeader=$(By.xpath("//h3"));
     public SelenideElement backtechpro=$(By.xpath("//a[@type='button']"));
 
+    //actions
+    public SelenideElement source=$(By.id("draggable"));
+    public SelenideElement target=$(By.id("droppable"));
+
+    //expicity wait
+    public SelenideElement startButton=$(By.xpath("//div[@id='start']//button"));
+    public SelenideElement helloworld=$(By.xpath("//div[@id='finish']//h4"));
+
 
 
 

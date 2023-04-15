@@ -1,13 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="Cucumber" time="27.736" tests="1" skipped="0" failures="0" errors="0">
-<testcase classname="iframes testing" name="TC_01 frames testing" time="27.614">
+<testsuite name="Cucumber" time="19.219" tests="1" skipped="0" failures="0" errors="0">
+<testcase classname="expicity_wait testing" name="TC_01 expicity_wait" time="19.109">
 <system-out><![CDATA[
-Given I navigate to "https://testcenter.techproeducation.com/index.php?page=iframe".passed
-And I verify the page header contains "iframe"..............................passed
-And I switch to frame 1.....................................................passed
-And I click on back to TechProEducation.com.................................passed
-And I wait for 5 seconds....................................................passed
-Then I get to URL of the page and verify it contains "techproeducation".....passed
+Given I navigate to "https://the-internet.herokuapp.com/dynamic_loading/1"..passed
+Then I click on the start button............................................passed
+And verify the Hello world text is displayed................................passed
 And I hold the browser open.................................................passed
 ]]></system-out>
 </testcase>

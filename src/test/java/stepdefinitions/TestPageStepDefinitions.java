@@ -8,10 +8,14 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
+import org.openqa.selenium.Keys;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import pages.TestPages;
 
-import static com.codeborne.selenide.Selenide.sleep;
-import static com.codeborne.selenide.Selenide.switchTo;
+import java.time.Duration;
+
+import static com.codeborne.selenide.Selenide.*;
 
 
 public class TestPageStepDefinitions {
@@ -142,6 +146,53 @@ public class TestPageStepDefinitions {
     public void i_get_to_url_of_the_page_and_verify_it_contains(String string) {
         System.out.println(WebDriverRunner.url());
         Assert.assertTrue(WebDriverRunner.url().contains(string));
+
+    }
+
+    //actions dropanddrag
+    @When("I drag the source in the target")
+    public void iDragTheSourceInTheTarget() {
+        //en çok tercih edilen yol
+   //     actions()
+   //             .dragAndDrop(testPages.source,testPages.target)
+   //             .build()
+   //             .perform();
+
+        //OR
+   //     actions()
+   //             .clickAndHold(testPages.source)
+   //             .moveToElement(testPages.target)
+   //             .build()
+   //             .perform();
+
+        //we can move the source to the specific coordinates
+        actions()
+               .dragAndDropBy(testPages.source,6,104)
+                .build()
+                .perform();
+    }
+
+    @Then("I scroll pagedown")
+    public void iScrollPagedown() {
+        actions().sendKeys(Keys.PAGE_DOWN).build().perform();
+    }
+
+    //expicity_wait
+
+    @Then("I click on the start button")
+    public void i_click_on_the_start_button() {
+        testPages.startButton.click();
+    }
+    @Then("verify the Hello world text is displayed")
+    public void verify_the_hello_world_text_is_displayed() {
+        //fails with no wait
+       // Assert.assertEquals("Hello World!",testPages.helloworld.getText());//fail
+
+        //handle wait webdriverwait class
+        WebDriverWait wait=new WebDriverWait(WebDriverRunner.getWebDriver(), Duration.ofSeconds(10));
+        wait.until(ExpectedConditions.visibilityOf(testPages.helloworld));
+
+        Assert.assertEquals("Hello World!",testPages.helloworld.getText());//pass
 
     }
 }
