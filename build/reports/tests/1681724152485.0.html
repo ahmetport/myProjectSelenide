@@ -1,0 +1,172 @@
+<html lang="en"><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Hugo 0.101.0">
+    <title>Alerts</title>
+    <link rel="icon" sizes="32x32" href="https://cdn-gckon.nitrocdn.com/mcjNijDCxcasHNsTPbACWXaLwpYrhyqG/assets/static/optimized/wp-content/uploads/2021/12/131ff0b59283157ad5b61823343c3040.techProEducation-32x32.png">
+
+     <style>
+
+
+        .nav-scroller .nav {
+            display: flex;
+            flex-wrap: nowrap;
+            padding-bottom: 1rem;
+            margin-top: -1px;
+            overflow-x: auto;
+            text-align: center;
+            white-space: nowrap;
+            -webkit-overflow-scrolling: touch;
+        }
+    </style>
+    <!-- Custom styles for this template -->
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display:700,900&amp;display=swap" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.13.2/themes/smoothness/jquery-ui.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.0/css/bootstrap.min.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+
+    <link href="assets/blog.css" rel="stylesheet">
+
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <!-- Fixed navbar -->
+        <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="index.php">Automation Engineer Applications</a>
+            </div>
+        </nav>
+    </header>
+</div>
+
+<main class="container mt-4">
+    <div class="row g-5 mt-5">
+        <div class="col-md-8"><script>
+    document.title = "Alerts";
+
+    function jsAlert() {
+        alert('I am a JS Alert');
+        log('You successfully clicked an alert');
+    }
+
+    function jsConfirm() {
+        var c = confirm('I am a JS Confirm');
+        var result = c === true ? 'Ok' : 'Cancel';
+        log('You clicked: ' + result);
+    }
+
+    function jsPrompt() {
+        var p = prompt('I am a JS prompt');
+        log('You entered: ' + p);
+    }
+
+    function log(msg) {
+        var result = document.getElementById('result');
+        result.innerHTML = msg;
+    }
+</script>
+<div class="container">
+    <h3>JavaScript Alerts</h3>
+    <p>Here are some examples of different JavaScript alerts which can be troublesome for automation</p>
+    <button class="btn btn-primary" onclick="jsAlert()">Click for JS Alert</button>
+    <button class="btn btn-primary" onclick="jsConfirm()">Click for JS Confirm</button>
+    <button class="btn btn-primary" onclick="jsPrompt()">Click for JS Prompt</button>
+    <br>
+    <br>
+    <h4>Result:</h4>
+    <p id="result" style="color:green">You entered: Hello orange</p>
+</div></div>
+<div class="col-md-4">
+    <div class="position-sticky" style="top: 3rem;">
+        <div class="p-4 mb-3 bg-light rounded">
+            <h4 class="fst-italic">About</h4>
+            <p class="mb-0">This website has been prepared for Automation Testers and has been prepared to
+                exemplify all the applications in the industry.</p>
+        </div>
+        <div class="p-4">
+            <h4 class="fst-italic">Archives</h4>
+            <ol class="list-unstyled mb-0">
+                <li><a href="index.php?page=a-b-testing">A/B Testing</a></li>
+                <li><a href="index.php?page=add-remove-elements">Add/Remove Elements</a></li>
+                <li><a href="index.php?page=autocomplete">Autocomplete</a></li>
+                <li><a href="index.php?page=broken-images">Broken Images</a></li>
+                <li><a href="index.php?page=challenging-dom">Challenging DOM</a></li>
+                <li><a href="index.php?page=checkboxes">Checkboxes</a></li>
+                <li><a href="index.php?page=challenging-dom">Challenging DOM</a></li>
+                <li><a href="index.php?page=context-menu">Context Menu</a></li>
+                <li><a href="index.php?page=disappearing-elements">Disappearing Elements</a></li>
+                <li><a href="index.php?page=drag-and-drop">Drag and Drop</a></li>
+                <li><a href="index.php?page=drag-and-drop-circles">Drag and Drop Circles</a></li>
+                <li><a href="index.php?page=droppable">Droppable</a></li>
+                <li><a href="index.php?page=dropdown">Dropdown</a></li>
+                <li><a href="index.php?page=dynamic-content">Dynamic Content</a></li>
+                <li><a href="index.php?page=dynamic-controls">Dynamic Controls</a></li>
+                <li><a href="index.php?page=entry-ad">Entry Ad</a></li>
+                <li><a href="index.php?page=exit-intent">Exit Intent</a></li>
+                <li><a href="index.php?page=file-download">File Download</a></li>
+                <li><a href="index.php?page=file-upload">File Upload</a></li>
+                <li><a href="index.php?page=forgot-password">Forgot Password</a></li>
+                <li><a href="index.php?page=form-authentication">Form Authentication</a></li>
+                <li><a href="index.php?page=geolocation">Geolocation</a></li>
+                <li><a href="index.php?page=floating-menu">Floating Menu</a></li>
+                <li><a href="index.php?page=horizontal-slider">Horizontal Slider</a></li>
+                <li><a href="index.php?page=hovers">Hovers</a></li>
+                <li><a href="index.php?page=iframe">Iframe</a></li>
+                <li><a href="index.php?page=infinite-scroll">Infinite Scroll</a></li>
+                <li><a href="index.php?page=inputs">Inputs</a></li>
+                <li><a href="index.php?page=jquery-ui-menus">JQuery UI Menus</a></li>
+                <li><a href="index.php?page=javascript-alerts">JavaScript Alerts</a></li>
+                <li><a href="index.php?page=javascript-onload-event-error">JavaScript onload event error</a></li>
+                <li><a href="index.php?page=key-presses">Key Presses</a></li>
+                <li><a href="index.php?page=multiple-buttons">Multiple Buttons</a></li>
+                <li><a href="index.php?page=multiple-windows">Multiple Windows</a></li>
+                <li><a href="index.php?page=new-tab">New tab</a></li>
+                <li><a href="index.php?page=notification-messages">Notification Messages</a></li>
+                <li><a href="index.php?page=radio-buttons">Radio Buttons</a></li>
+                <li><a href="index.php?page=registration-form">Registration Form</a></li>
+                <li><a href="index.php?page=secure-file-download">Secure File Download</a></li>
+                <li><a href="index.php?page=sortable-data-tables">Sortable Data Tables</a></li>
+                <li><a href="index.php?page=status-codes">Status Codes</a></li>
+                <li><a href="index.php?page=wysiwyg-ditor">WYSIWYG Editor</a></li>
+            </ol>
+        </div>
+
+        <div class="p-4">
+            <h4 class="fst-italic">Elsewhere</h4>
+            <ol class="list-unstyled">
+                <li><a target="_parent" href="https://www.youtube.com/channel/UCU367kN2oUqf38S5iIk9sCw">Youtube</a></li>
+                <li><a target="_parent" href="https://twitter.com/techproedu">Twitter</a></li>
+                <li><a target="_parent" href="https://www.facebook.com/techproeducation">Facebook</a></li>
+                <li><a target="_parent" href="https://www.instagram.com/techproeducation/">Instagram</a></li>
+                <li><a target="_parent" href="https://www.linkedin.com/company/techproeducation/">Linkedin</a>
+                </li>
+            </ol>
+        </div>
+    </div>
+</div>
+
+</div>
+
+</main>
+
+<footer class="blog-footer">
+    <p>Povered By<a href="https://techproeducation.com/">TechProEducation</a>.
+    </p>
+    <p>
+        <a href="#">Back to top</a>
+    </p>
+</footer>
+
+
+
+
+</body></html>

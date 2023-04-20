@@ -100,18 +100,20 @@ public class TestPageStepDefinitions {
     //alerts
 
     @Given("I click on alert prompt")
-    public void i_click_on_alert_prompt() {
+    public void i_click_on_alert_prompt()
+    {
         testPages.jsPrompt.click();
     }
     @Given("I enter {string} and click OK")
     public void i_enter_and_click_ok(String string) {
-        WebDriverRunner.getWebDriver().switchTo().alert().sendKeys("Hello portakal");//text
+        WebDriverRunner.getWebDriver().switchTo().alert().sendKeys(string);//text
         WebDriverRunner.getWebDriver().switchTo().alert().accept();//ok
 
     }
     @Given("I verify the result contains {string}")
     public void i_verify_the_result_contains(String string) {
-        testPages.result.shouldHave(Condition.text(string));
+        testPages.result.shouldHave(Condition.text(string));//SELENİDEDEN GELEN DOGRULAMA
+       // Assert.assertTrue(testPages.result.getText().contains(string));//JUNIT DEN GELEN DOGRULAMA
 
     }
 
@@ -126,7 +128,7 @@ public class TestPageStepDefinitions {
     @Given("I switch to frame {int}")
     public void i_switch_to_frame(Integer int1) {
         //iframe window
-        WebDriverRunner.getWebDriver().switchTo().frame(int1-1);
+        WebDriverRunner.getWebDriver().switchTo().frame(int1-1);//0 INCI İNDEX >>> 1 FRAME DEMEK
 
     }
     @Given("I click on back to TechProEducation.com")
@@ -139,12 +141,13 @@ public class TestPageStepDefinitions {
     //switch to window
     @When("I switch to window {int}")
     public void i_switch_to_window(Integer int1) {
-        switchTo().window(int1-1);
+        switchTo().window(int1-1);//YENİ SAYFAYA GECTİ
+        System.out.println();
 
     }
     @Then("I get to URL of the page and verify it contains {string}")
     public void i_get_to_url_of_the_page_and_verify_it_contains(String string) {
-        System.out.println(WebDriverRunner.url());
+        System.out.println(WebDriverRunner.url());//DRİVER HALA ESKİ PAGE DE
         Assert.assertTrue(WebDriverRunner.url().contains(string));
 
     }
