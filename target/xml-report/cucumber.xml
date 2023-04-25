@@ -1,14 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="Cucumber" time="28.701" tests="1" skipped="0" failures="0" errors="0">
-<testcase classname="iframes testing" name="TC_01 frames testing" time="28.6">
+<testsuite name="Cucumber" time="13.168" tests="1" skipped="0" failures="0" errors="0">
+<testcase classname="screenshot" name="tek element ekran görüntüsü alma" time="13.043">
 <system-out><![CDATA[
-Given I navigate to "https://testcenter.techproeducation.com/index.php?page=iframe".passed
-And I verify the page header contains "iframe"..............................passed
-And I switch to frame 1.....................................................passed
-And I click on back to TechProEducation.com.................................passed
-And I wait for 5 seconds....................................................passed
-Then I get to URL of the page and verify it contains "techproeducation".....passed
-And I hold the browser open.................................................passed
+Given I navigate to "https://www.google.com"................................passed
+And sadece google goruntusunu al............................................passed
 ]]></system-out>
 </testcase>
 </testsuite>

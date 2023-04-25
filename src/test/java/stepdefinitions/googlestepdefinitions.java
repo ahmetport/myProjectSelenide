@@ -1,12 +1,16 @@
 package stepdefinitions;
 
 import com.codeborne.selenide.Configuration;
+import com.codeborne.selenide.Selenide;
 import com.codeborne.selenide.WebDriverRunner;
+import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
 import pages.GooglePages;
+
+import java.util.Date;
 
 import static com.codeborne.selenide.Selenide.*;
 import static com.codeborne.selenide.Condition.*;
@@ -80,6 +84,12 @@ public class googlestepdefinitions {
     @Then("the firstb result in the page sections should contain {string}")
     public void theFirstbResultInThePageSectionsShouldContain(String string) {
         googlePages.getAllSections.get(0).shouldHave(text(string));//checks is the first section contains Tesla keyword
+
+    }
+    @And("tum sayfanın ekran goruntusunu alır.")
+    public void tumSayfaninEkranGoruntusunuAlir() {
+       // screenshot(new Date().toString());//ekran goruntusu ismi için dinamik yapıldı java date kullanıldı
+        screenshot("ekran goruntusu1");
 
     }
 }

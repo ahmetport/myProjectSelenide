@@ -46,6 +46,9 @@ public class TestPages {
     public SelenideElement startButton=$(By.xpath("//div[@id='start']//button"));
     public SelenideElement helloworld=$(By.xpath("//div[@id='finish']//h4"));
 
+    //SCREENSHOT
+    public SelenideElement googleimage=$(By.cssSelector(".lnXdpd"));
+
 
 
 
